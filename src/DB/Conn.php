@@ -11,7 +11,7 @@ class Conn{
 
     public static function getInstancia(){
         if(is_null(self::$instancia)){
-            self::$instancia = new \PDO('mysql:host=localhost;dbname=formacao_php','','');
+            self::$instancia = new \PDO('mysql:host=localhost;dbname=','','');
         }
 
         return self::$instancia;
