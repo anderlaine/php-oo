@@ -1,0 +1,24 @@
+<?php require VIEWS_PATH . 'includes/header.phtml';?>
+
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+  </div>
+</main>
+<div class="container">
+  <div class="col-md-12">
+    <?php foreach($this->products as $produto): ?>
+    <div class="col-md-4">
+      <img src="http://via.placeholder.com/350x150?text=<?=$produto['name'];?>" alt="">
+      <h2><?=$produto['name'];?></h2>
+      <p><?=$produto['description'];?></p>
+      <p><?=$produto['price'];?></p>
+      <p><?=$produto['id'];?></p>
+    </div>
+    <?php endforeach; ?>
+  </div>
+</div>
+ 
+<?php require VIEWS_PATH . 'includes/footer.phtml';?>
